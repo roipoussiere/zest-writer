@@ -28,7 +28,8 @@ public class TestCorrect {
         String txt="<p>Ce text et plin 2 fotes lol.</p>";
         String s = StringEscapeUtils.unescapeHtml(txt);
         String result = corrector.checkHtmlContent(s);
-        assertEquals(result, "<p>Ce <span class=\"error-french\" title=\"Note : Faute d'orthographe possible (sans suggestions)\">text</span>  et <span class=\"error-french\" title=\"Note : Faute d'orthographe possible (sans suggestions)\">plin</span>  2 <span class=\"error-french\" title=\"Note : Faute d'orthographe possible (sans suggestions)\">fotes</span>  lol.</p>");
+        int expectedError = 3;
+        assertEquals(result.split("error-french").length, expectedError+1);
     }
 
     @Test

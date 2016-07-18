@@ -17,6 +17,7 @@ public class TestConfig {
 
     @Before
     public void setUp() {
+
         config = new Configuration(TEST_DIR.getAbsolutePath());
         MetaContent.deleteFile(new File(TEST_DIR, ".zestwriter"));
     }

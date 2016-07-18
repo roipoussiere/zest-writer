@@ -17,6 +17,7 @@ public class TestUtils {
         Configuration config = new Configuration (System.getProperty("java.io.tmpdir"));
     }
 
+    @Test
     public void testCorrectorTextToHtml() {
         String text = "Bonjour, je suis persuade que tu n'aime pas les frites. Cest normal je ne suis pas belge";
         int expectedError = 3;
